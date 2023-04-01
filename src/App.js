@@ -1,12 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import {React} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+class App extends React.Component {
+  render(){
+    return (
+      <div className="App">
+        <audio controls> <source src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" type="audio/mp3" /> </audio>
+      </div>
+    );
+  }
 }
 
 export default App;
