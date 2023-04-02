@@ -1,4 +1,4 @@
-.Drumpad{
+.drum-pad{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,18 @@
     font-weight: bolder;
 }
 
-.Drumpad:hover{
-    background-color: rgb(91, 91, 91);
+.drum-pad:active{
+    animation: flash 0.75s linear infinite; 
+}
+
+@keyframes flash {
+    0%{
+        background-color: gold;
+    }
+
+    100%{
+        background-color: gray;
+    }
+    
 }
 

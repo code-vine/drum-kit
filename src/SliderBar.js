@@ -9,8 +9,8 @@ class SliderBar extends React.Component {
     render(){
       return (
         <div className="SliderBar">
-            <div class="slidecontainer">
-                <input type="range" min="0" max="100" class="range"  />
+            <div className="slidecontainer">
+                <input type="range" min="0" max="100" className="range" onChange={this.props.onChange}  />
             </div>
         </div>
       );
