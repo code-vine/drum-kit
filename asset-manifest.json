@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/drum-kit/static/css/main.922800ca.css",
+    "main.js": "/drum-kit/static/js/main.c5242e24.js",
+    "static/js/787.6ab38836.chunk.js": "/drum-kit/static/js/787.6ab38836.chunk.js",
+    "index.html": "/drum-kit/index.html",
+    "main.922800ca.css.map": "/drum-kit/static/css/main.922800ca.css.map",
+    "main.c5242e24.js.map": "/drum-kit/static/js/main.c5242e24.js.map",
+    "787.6ab38836.chunk.js.map": "/drum-kit/static/js/787.6ab38836.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.922800ca.css",
+    "static/js/main.c5242e24.js"
+  ]
+}
