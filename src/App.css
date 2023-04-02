@@ -1,0 +1,17 @@
+.App{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+}
+
+.DrumKit{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: darkgray;
+  width: 45%;
+  border: 5px solid orange;
+}

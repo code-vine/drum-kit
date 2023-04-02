@@ -1,6 +1,6 @@
 import './App.css';
 import React from "react";
-import Drumpad from './Drumpad';
+import PadGroup from './PadGroup';
 
 class App extends React.Component {
   constructor(props){
@@ -13,7 +13,9 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        
+        <div className='DrumKit'>
+            <PadGroup />
+        </div>
       </div>
     );
   }

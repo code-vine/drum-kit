@@ -1,0 +1,17 @@
+.Drumpad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: gray;
+    border-radius: 10px;
+    height: 80px;
+    width:100%;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.9);
+    font-weight: bolder;
+}
+
+.Drumpad:hover{
+    background-color: rgb(91, 91, 91);
+}
+
