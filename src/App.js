@@ -1,8 +1,10 @@
 import './App.css';
 import React from "react";
 import PadGroup from './PadGroup';
-import ToggleSwitch
- from './ToggleSwitch';
+import ToggleSwitch from './ToggleSwitch';
+import SliderBar from './SliderBar';
+
+
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -18,6 +20,8 @@ class App extends React.Component {
             <PadGroup />
             <div className='controlPanel' >
                 <ToggleSwitch label="Power" />
+                
+                <SliderBar id="VolumeSlider" />
                 <ToggleSwitch label="Bank" />
             </div>
         </div>
