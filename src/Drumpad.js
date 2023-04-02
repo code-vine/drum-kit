@@ -12,7 +12,9 @@ class Drumpad extends React.Component {
 
         if(this.props.power)
         {
-            e.target.focus();
+            e.target.classList.add("flash-animation");
+            e.target.addEventListener("animationend",function(){e.target.classList.remove("flash-animation")});
+
             let display = document.getElementById("display");
             let audio = document.getElementById(this.props.label);
             let reg = /-/g;

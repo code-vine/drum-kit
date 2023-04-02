@@ -41,14 +41,13 @@ class App extends React.Component {
   }
 
   onKeyDown(e){
-    if(!this.state.power)return;
-    let id = e.key.toUpperCase();
-    let audioElement = document.getElementById(id);
-    if(audioElement !== undefined && audioElement !== null){
-      audioElement.parentElement.classList.add("flash-animation");
-      audioElement.parentElement.click();
-      audioElement.parentElement.addEventListener("animationend",function(){audioElement.parentElement.classList.remove("flash-animation")});
+    if(this.state.power){
+        let id = e.key.toUpperCase();
+        let audioElement = document.getElementById(id);
+        if(audioElement !== undefined && audioElement !== null){
+          audioElement.parentElement.click();
     }
+  }
   }
 
   power(e){
