@@ -20,9 +20,13 @@ class App extends React.Component {
             <PadGroup />
             <div className='controlPanel' >
                 <ToggleSwitch label="Power" />
-                
+                <div className='display'>Hello</div>
                 <SliderBar id="VolumeSlider" />
                 <ToggleSwitch label="Bank" />
+            </div>
+            <div className='logo'>
+              <div className='innerLogo'>Drumkit&nbsp;</div>
+              <i class="bi bi-music-note-beamed"></i>
             </div>
         </div>
       </div>

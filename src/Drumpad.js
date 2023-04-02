@@ -6,7 +6,6 @@ class Drumpad extends React.Component {
         super(props);
     }
 
-    
    render(){
      return (
         <div className="Drumpad" onClick={this.props.onClick}>

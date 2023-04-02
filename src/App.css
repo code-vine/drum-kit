@@ -8,6 +8,7 @@
 }
 
 .DrumKit{
+  position: relative;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
@@ -22,5 +23,32 @@
   align-items: center;
   justify-content: space-between;
   width: 50%;
+  height: 100%;
+}
+
+.display{
+  width: 70%;
+  padding: 12px 0;
+  background-color:gray;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.logo{
+  display: flex;
+  position: absolute;
+  right: 5px;
+  top:2px;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  align-items: center;
+}
+
+.logo > i{
+  font-size: 0.7rem;
+  margin-top: 2px;
+  color: blue;
 }
 

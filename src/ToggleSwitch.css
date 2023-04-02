@@ -1,9 +1,11 @@
 .ToggleSwitch{
     width: fit-content;
     padding: 2px;
+    margin: 15px;
 }
 
 .toggleLabel{
+    font-weight: bold;
     font-size: 1rem;
     margin-bottom: -0.05rem;
     text-align: center;
