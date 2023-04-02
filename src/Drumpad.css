@@ -12,8 +12,13 @@
     font-weight: bolder;
 }
 
+.flash-animation{
+    animation: flash 0.75s linear 1; 
+}
+
 .drum-pad:active{
     animation: flash 0.75s linear infinite; 
+
 }
 
 @keyframes flash {

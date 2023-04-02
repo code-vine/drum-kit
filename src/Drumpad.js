@@ -8,15 +8,19 @@ class Drumpad extends React.Component {
     }
     onClick(e){
         e.preventDefault();
-        
         console.log(e.target.classList)
-        let display = document.getElementById("display");
-        let audio = document.getElementById(this.props.label);
-        let reg = /-/g;
-        let text= this.props.id.replace(reg, " ");
-        display.innerText = text;
-        audio.volume = this.props.volume;
-        audio.play();
+
+        if(this.props.power)
+        {
+            e.target.focus();
+            let display = document.getElementById("display");
+            let audio = document.getElementById(this.props.label);
+            let reg = /-/g;
+            let text= this.props.id.replace(reg, " ");
+            display.innerText = text;
+            audio.volume = this.props.volume;
+            audio.play();
+        }
     }
    render(){
      return (

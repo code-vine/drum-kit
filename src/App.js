@@ -4,7 +4,16 @@ import PadGroup from './PadGroup';
 import ToggleSwitch from './ToggleSwitch';
 import SliderBar from './SliderBar';
 
-const AUDIOKEYS = ['Q', 'W','E','A','S','D','Z','X','C'];
+const AUDIOLOOKUP = 
+{'Q':"https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3",
+ 'W':"https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3",
+ 'E':"https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3",
+ 'A':"https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3",
+ 'S':"https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3",
+ 'D':"https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3",
+ 'Z':"https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3",
+ 'X':"https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3",
+ 'C':"https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"};
 
 class App extends React.Component {
   constructor(props){
@@ -16,6 +25,7 @@ class App extends React.Component {
     }
     this.volumeChange = this.volumeChange.bind(this);
     this.power = this.power.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
   }
 
   volumeChange(e){
@@ -31,11 +41,13 @@ class App extends React.Component {
   }
 
   onKeyDown(e){
+    if(!this.state.power)return;
     let id = e.key.toUpperCase();
     let audioElement = document.getElementById(id);
-    console.log(audioElement);
     if(audioElement !== undefined && audioElement !== null){
+      audioElement.parentElement.classList.add("flash-animation");
       audioElement.parentElement.click();
+      audioElement.parentElement.addEventListener("animationend",function(){audioElement.parentElement.classList.remove("flash-animation")});
     }
   }
 
@@ -43,12 +55,14 @@ class App extends React.Component {
     let powerOn = !this.state.power;
     let display = document.getElementById("display");
     display.innerText = `Power ${powerOn ? "On" : "Off"}`;
+    let audiokeys = Object.keys(AUDIOLOOKUP);
+    
     
     this.setState((prevState) =>
     ({
       power:powerOn,
       kit:prevState.kit,
-      volume:prevState.power
+      volume:this.state.volume
     }));
 
 
@@ -58,12 +72,12 @@ class App extends React.Component {
     return (
       <div className="App" >
         <div id="drum-machine" className='DrumKit'>
-            <PadGroup volume={this.state.volume} />
+            <PadGroup volume={this.state.volume} power={this.state.power} />
             <div className='controlPanel' >
                 <ToggleSwitch label="Power" onChange={this.power} checked={this.state.power}/>
                 <div id="display" className='display'>Hello</div>
                 <SliderBar id="VolumeSlider" onChange={this.volumeChange} />
-                <ToggleSwitch label="Bank" />
+                {/*<ToggleSwitch label="Bank" />*/}
             </div>
             <div className='logo'>
               <div className='innerLogo'>Drumkit&nbsp;</div>
