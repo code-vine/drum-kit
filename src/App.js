@@ -1,7 +1,8 @@
 import './App.css';
 import React from "react";
 import PadGroup from './PadGroup';
-
+import ToggleSwitch
+ from './ToggleSwitch';
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -15,6 +16,10 @@ class App extends React.Component {
       <div className="App">
         <div className='DrumKit'>
             <PadGroup />
+            <div className='controlPanel' >
+                <ToggleSwitch label="Power" />
+                <ToggleSwitch label="Bank" />
+            </div>
         </div>
       </div>
     );
